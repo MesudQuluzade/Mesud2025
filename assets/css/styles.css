@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: "Roboto Condensed", serif;
+}
+
+
+/* Custom Header Gradient Background */
+.custom-header {
+    position: relative;
+    z-index: 10;
+}
+
+.custom-header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1000px;
+    height: 41px;
+    border-radius: 0px 0px 0px 25px;
+    background: linear-gradient(90deg, #1C3EFF 0%, #14B7F0 100%);
+    z-index: -1;
+}
