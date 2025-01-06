@@ -9,19 +9,22 @@ body {
     position: absolute;
     top: 0;
     right: 0;
-    width: 1000px;
-    height: 40px;
+    width: 100%;
+    max-width: 1001.89px;
+    height: 41px;
     border-radius: 0px 0px 0px 25px;
     background: linear-gradient(90deg, #1C3EFF 0%, #14B7F0 100%);
+    z-index: 10;
 }
 
-/* Mobile Navbar */
 .mobile-navbar {
     position: absolute;
     top: 0;
     right: 0;
-    width: 170px;
-    height: 40px;
+    width: 100%;
+    max-width: 200px;
+    height: 41px;
     border-radius: 0px 0px 0px 25px;
     background: linear-gradient(90deg, #1C3EFF 0%, #14B7F0 100%);
+    z-index: 10;
 }
