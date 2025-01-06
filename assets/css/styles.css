@@ -8,11 +8,9 @@ body {
 /* Custom Header Gradient Background */
 .custom-header {
     position: relative;
-    z-index: 10;
 }
 
-.custom-header:before {
-    content: '';
+.custom-header {
     position: absolute;
     top: 0;
     right: 0;
@@ -20,5 +18,15 @@ body {
     height: 41px;
     border-radius: 0px 0px 0px 25px;
     background: linear-gradient(90deg, #1C3EFF 0%, #14B7F0 100%);
-    z-index: -1;
 }
+
+.mobile-navbar  {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 41px;
+    border-radius: 0px 0px 0px 25px;
+    background: linear-gradient(90deg, #1C3EFF 0%, #14B7F0 100%);
+}
+

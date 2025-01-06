@@ -6,17 +6,19 @@
     
     <!-- Boxicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
-    <link rel="stylesheet" href="./assets/css/styles.css">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
     <title>Məlumatların Bərpası</title>
 </head>
-<body class="bg-white">
+<body class="bg-white font-roboto">
     
     <!-- Header Section -->
-    <header class="custom-header hidden lg:flex flex items-center justify-center px-10 py-3 h-[41px]">
+    <header class="custom-header hidden lg:flex items-center justify-center px-10 py-3">
         <!-- Navigation Links -->
         <nav class="flex items-center gap-6">
             <a href="#" class="text-white hover:text-blue-600 font-semibold">Ana Səhifə</a>
@@ -25,15 +27,17 @@
         </nav>
         
         <!-- Language Selector -->
-        <div class="flex gap-3 absolute right-4 top-2">
+        <div class="flex ml-auto gap-3">
             <a href="#" class="text-white hover:text-blue-600 font-semibold">AZ</a>
             <a href="#" class="text-white hover:text-blue-600 font-semibold">RU</a>
             <a href="#" class="text-white hover:text-blue-600 font-semibold">EN</a>
         </div>
     </header>
+
+    <div class="mobile-navbar flex lg:hidden"></div>
     
     <!-- Services Section -->
-    <section class="bg-white p-6 shadow-md">
+    <section class="bg-white p-6 shadow-md mt-6 hidden md:flex">
         <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10 text-center">
             <div>
                 <i class='bx bx-mobile-alt text-4xl text-blue-600'></i>
@@ -53,6 +57,6 @@
             </div>
         </div>
     </section>
-    
+
 </body>
 </html>
