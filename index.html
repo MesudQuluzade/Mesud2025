@@ -15,10 +15,10 @@
 
     <title>Məlumatların Bərpası</title>
 </head>
-<body class="bg-white font-roboto">
+<body class="bg-white">
     
     <!-- Header Section -->
-    <header class="custom-header hidden lg:flex items-center justify-center px-10 py-3">
+    <header class="custom-header hidden lg:flex items-center justify-between px-10 py-3">
         <!-- Navigation Links -->
         <nav class="flex items-center gap-6">
             <a href="#" class="text-white hover:text-blue-600 font-semibold">Ana Səhifə</a>
@@ -27,7 +27,7 @@
         </nav>
         
         <!-- Language Selector -->
-        <div class=" ml-auto flex gap-3">
+        <div class="flex gap-3">
             <a href="#" class="text-white hover:text-blue-600 font-semibold">AZ</a>
             <a href="#" class="text-white hover:text-blue-600 font-semibold">RU</a>
             <a href="#" class="text-white hover:text-blue-600 font-semibold">EN</a>
@@ -35,9 +35,9 @@
     </header>
 
     <!-- Mobile Navbar -->
-    <div class="mobile-navbar flex lg:hidden">
-        <i class="bx bx-menu"></i>
-        <div class=" ml-5 flex gap-3">
+    <div class="mobile-navbar flex lg:hidden justify-between px-4 py-2">
+        <i class="bx bx-menu text-white text-2xl cursor-pointer"></i>
+        <div class="flex gap-3">
             <a href="#" class="text-white hover:text-blue-600 font-semibold">AZ</a>
             <a href="#" class="text-white hover:text-blue-600 font-semibold">RU</a>
             <a href="#" class="text-white hover:text-blue-600 font-semibold">EN</a>
@@ -45,8 +45,8 @@
     </div>
     
     <!-- Services Section -->
-    <section class="bg-white p-6 shadow-md mt-6 hidden md:flex justify-center">
-        <div class="grid md:grid-cols-3 lg:grid-cols-5 gap-10 text-center">
+    <section class="bg-white p-6 shadow-md mt-6 hidden md:flex items-center justify-center">
+        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-10 text-center">
             <div>
                 <i class='bx bx-mobile-alt text-4xl text-blue-600'></i>
                 <p class="mt-4 font-semibold">iPhone məlumatların bərpası</p>
@@ -65,7 +65,6 @@
             </div>
         </div>
     </section>
-    
 
 </body>
 </html>
