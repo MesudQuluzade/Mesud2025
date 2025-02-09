@@ -11,15 +11,25 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- carousers link -->
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <!-- Custom Styles -->
+
     <link rel="stylesheet" href="./assets/css/styles.css">
 
     <title>Məlumatların Bərpası</title>
 </head>
 
-<body class="bg-blue-50">
+<body>
 
-    <!-- Header Section  Starts -->
+    <!-- Header Section Starts -->
     <header class="custom-header hidden lg:flex items-center justify-between px-12 py-6 bg-blue-800">
         <nav class="flex items-center gap-8">
             <a href="#" class="text-white hover:text-blue-400 font-semibold">Ana Səhifə</a>
@@ -33,12 +43,14 @@
             <a href="#" class="text-white hover:text-blue-400 font-semibold">EN</a>
         </div>
     </header>
+    <div class="left-side"></div>
 
-    <!-- Header Section  Ends -->
+    <!-- Header Section Ends -->
 
 
     <!-- Mobile Navbar -->
-    <div class="mobile-navbar flex lg:hidden items-center justify-between px-6 py-4 bg-blue-800">
+    <div id="mobile-menu" class="mobile-navbar flex lg:hidden items-center justify-between px-6 py-4 bg-blue-800">
+        <img id="close-icon" src="./assets/images/icons/close.svg" alt="close-icon" class="hidden cursor-pointer">
         <i id="menu-toggle" class="bx bx-menu text-white text-3xl cursor-pointer"></i>
         <div class="flex gap-4">
             <a href="#" class="text-white hover:text-blue-400 font-semibold">AZ</a>
@@ -47,31 +59,55 @@
         </div>
     </div>
 
-    <!-- Mobile Menu-->
-    <nav id="mobile-menu" class="hidden lg:hidden bg-white shadow-md p-4 transition-all duration-300">
+    <!-- Mobile Menu Content-->
+    <nav id="mobile-menu-content"
+        class="hidden lg:hidden z-10 absolute right-10 top-11 border border-blue-700 w-[200px] bg-white rounded-xl shadow-md p-4 transition-all duration-300">
         <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Ana Səhifə</a>
         <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Haqqımızda</a>
         <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Xidmətlər</a>
     </nav>
 
-    <!-- Mobile Header with Logo -->
-    <div class="bg-white py-[53px] px-6 shadow-lg lg:hidden flex items-center justify-between">
+    <!-- Mobile Header -->
+    <div class="bg-white py-5 px-6 mt-10 shadow-lg lg:hidden flex items-center justify-between">
         <div class="flex items-center gap-6">
-            <h4 class="text-3xl font-semibold tracking-wide text-blue-600">Data <span class="text-blue-800">Recovery</span></h4>
+            <h4 class="text-2xl font-semibold tracking-wide text-blue-600">Data <span
+                    class="text-blue-800">Recovery</span></h4>
         </div>
-        <button class="flex items-center gap-3 px-3 py-2 bg-blue-600 text-white hover:bg-blue-700 transition-all rounded-lg">
-            <img src="./assets/images/candy-box.svg" alt="candy-box-icon" class="w-8 h-8">
-            <span class="font-semibold text-xl">Xidmətlər</span>
-        </button>
+        <div class="relative inline-block dropdown-menu mx-3">
+            <button class="flex items-center gap-3 px-5 w-[220px] h-[50px] bg-blue-600 text-white rounded-lg">
+                <img src="./assets/images/icons/candy-box.svg" alt="candy-box-icon" class="w-[30px] h-[30px]">
+                <span class="font-semibold text-[18px]">Xidmətlərimiz</span>
+            </button>
+
+            <div class="mega-menu absolute z-10 right-30 mt-2 w-[240px] bg-white shadow-lg rounded-lg border-[1px] border-blue-700">
+                <div class="p-4 hover:bg-blue-100 transition-all flex items-center gap-3">
+                    <i class='bx bx-mobile-alt text-3xl text-blue-600'></i>
+                    <p class="font-semibold text-lg">iPhone məlumatların bərpası</p>
+                </div>
+                <div class="p-4 hover:bg-blue-100 transition-all flex items-center gap-3">
+                    <i class='bx bx-chip text-3xl text-blue-600'></i>
+                    <p class="font-semibold text-lg">SSD məlumatların bərpası</p>
+                </div>
+                <div class="p-4 hover:bg-blue-100 transition-all flex items-center gap-3">
+                    <i class='bx bx-hdd text-3xl text-blue-600'></i>
+                    <p class="font-semibold text-lg">HDD məlumatların bərpası</p>
+                </div>
+                <div class="p-4 hover:bg-blue-100 transition-all flex items-center gap-3">
+                    <i class='bx bx-server text-3xl text-blue-600'></i>
+                    <p class="font-semibold text-lg">RAID məlumatların bərpası</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!-- Services Section -->
-    <section class="bg-white p-8 shadow-lg hidden lg:flex items-center justify-between">
+    <section class="services-section bg-white mt-12 py-2 px-8 hidden lg:flex items-center justify-between">
         <div class="flex items-center gap-4">
-            <h4 class="text-3xl font-semibold tracking-wide text-blue-600">Data <span class="text-blue-800">Recovery</span></h4>
+            <h4 class="text-3xl font-semibold tracking-wide text-blue-600">Data <span
+                    class="text-blue-800">Recovery</span></h4>
         </div>
 
-        <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-12 text-center">
+        <div class="grid lg:grid-cols-4 gap-12 text-center">
             <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
                 <i class='bx bx-mobile-alt text-5xl text-blue-600'></i>
                 <p class="mt-4 font-semibold text-lg">iPhone məlumatların bərpası</p>
@@ -91,19 +127,84 @@
         </div>
     </section>
 
-    <script>
-        document.getElementById("menu-toggle").addEventListener("click", function () {
-            let mobileMenu = document.getElementById("mobile-menu");
-            mobileMenu.classList.toggle("hidden");
+    <section class="banner-section relative overflow-hidden">
+        <div class="slick-slider">
+            <div class="slick-slide h-screen bg-cover bg-center"
+                style="background-image: url('./assets/images/Asus-gaming-laptop-hard-drive-replacement-and-upgrade-to-solid-state-drive-IMG_20190922_151200.jpg');">
+                <div class="flex items-center justify-center h-full">
+                    <div class="text-center text-white px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Məlumatlarınızı Etibarlı Əllərə Həvalə Edin</h1>
+                        <p class="text-lg md:text-xl">Hər növ məlumat itkilərini peşəkar şəkildə bərpa edirik. Bizə
+                            güvənin!</p>
+                        <button
+                            class="px-6 py-2 my-5 border border-blue-500 text-white hover:bg-blue-500 hover:text-white hover:border-blue-700 rounded-lg transition-all duration-300">
+                            Müraciət Et
+                        </button>
+                    </div>
+                </div>
+            </div>
 
-            // Səhifənin kaymasını bloklamaq üçün
-            if (!mobileMenu.classList.contains("hidden")) {
-                document.body.classList.add("overflow-hidden");
-            } else {
-                document.body.classList.remove("overflow-hidden");
-            }
-        });
-    </script>
+            <div class="slick-slide h-screen bg-cover bg-center"
+                style="background-image: url('./assets/images/img.png');">
+                <div class="flex items-center justify-center h-full">
+                    <div class="text-center text-white px-4">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">İtmiş Məlumatlarınızı Bərpa Edirik</h1>
+                        <p class="text-lg md:text-xl">Fayllarınızın harada və necə silinməsindən asılı olmayaraq, onları
+                            geri qaytarırıq.</p>
+                        <button
+                            class="px-6 py-2 my-4 border border-blue-500 text-white hover:bg-blue-500 hover:text-white hover:border-blue-700 rounded-lg transition-all duration-300">
+                            Müraciət Et
+                        </button>
+                    </div>
+                </div>/
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section px-12 py-6 flex flex-col md:flex-row items-center gap-8">
+        <!-- Left side (The texts of the part) -->
+        <div class="left-side md:w-1/2">
+            <h1 class="text-3xl font-bold text-blue-600">Məlumatların Bərpası Üzrə Servis Mərkəzi | Data Recovery</h1>
+            <span class="block w-full h-[1px] bg-gray-400 my-4"></span>
+            <p class="text-lg text-gray-700">
+                Noutbukunuzda, kompüterinizdə və ya flaş kartınızda gözlənilmədən və ya səhv hərəkətlər nəticəsində hər hansı bir məlumat və ya fayl silinibsə, dərhal işinizi dayandırın və bizə müraciət edin. Çünki istifadəni davam etdirmək, silinmiş məlumatların daha dərinə getməsinə səbəb olur və bərpa prosesini çətinləşdirir. Əgər məlumat itkisi virus hücumu nəticəsində baş veribsə, bərpa mümkün ola bilər, lakin mütəxəssislərə müraciət etməyiniz vacibdir.
+            </p>
+            <p class="mt-4 text-lg text-gray-700">
+                Bu cür problemlər proqram və ya aparat nasazlığı, virus hücumu, düzgün bağlanmama, vacib məlumatların təsadüfən silinməsi və ya disk formatlanması səbəbindən yarana bilər.
+            </p>
+            <h2 class="mt-6 text-2xl font-bold text-blue-600">Məlumatların Bərpası Nə Zaman Tələb Olunur?</h2>
+            <span class="block w-full h-[1px] bg-gray-400 my-4"></span>
+
+            <ul class="list-disc list-inside mt-4 text-lg text-gray-700">
+                <li>Məlumat təsadüfən silindikdə;</li>
+                <li>Virus yoluxduqda;</li>
+                <li>Disk formatlaşdırıldıqda;</li>
+                <li>Hard disk və ya yaddaş qurğusu zədələndikdə.</li>
+            </ul>
+            <p class="mt-4 text-lg text-gray-700">
+                Silinmə səbəbindən asılı olmayaraq istənilən formatda olan məlumatlar - musiqi, sənədlər, şəkillər, audio və video fayllar bərpa edilə bilər. Hətta flaş kart və ya sərt disk formatlaşdırıldıqdan sonra belə məlumatlar qaytarıla bilər. Lakin dəqiq diaqnoz qoymadan məlumatların tam bərpa olunub-olunmayacağını demək mümkün deyil.
+            </p>
+        
+            <h2 class="mt-6 text-2xl font-bold text-blue-600">Məlumat Bərpasını Özünüz Etməkdənsə, Niyə Bizə Müraciət Etməlisiniz?</h2>
+            <span class="block w-full h-[1px] bg-gray-400 my-4"></span>
+            <p class="mt-4 text-lg text-gray-700">
+                Peşəkar mütəxəssislər tərəfindən aparılan bərpa işləri 99% hallarda uğurla nəticələnir. Qalan 1% isə sərt diskin ağır zədələnməsi və fiziki deformasiyası ilə bağlı hallardır. Lakin hətta belə vəziyyətlərdə də məlumatları bərpa etməyə cəhd göstərmək mümkündür.  
+            </p>
+            <p class="mt-4 text-lg text-gray-700">
+                Üstəlik, müştərilərimiz yalnız uğurlu nəticə əldə etdikdə ödəniş edirlər. Siz risk etmədən, etibarlı və peşəkar xidmət ala bilərsiniz.
+            </p>
+        </div>
+        
+        <!-- Right side (the image of the part) -->
+        <div class="right-side md:w-1/2 md:flex hidden justify-center">
+            <img src="./assets/images/310069303_588239309756052_1513635842477209858_n.jpg" alt="Məlumatların Bərpası" class="w-full max-w-lg">
+        </div>
+    </section>
+    
+
+    <script src="./assets/js/srcipt.js"></script>
 
 </body>
+
 </html>
