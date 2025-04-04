@@ -4,52 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Boxicons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
-
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-
     <!-- carousers link -->
-
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
     <!-- Custom Styles -->
-
     <link rel="stylesheet" href="./assets/css/styles.css">
-
     <title>Məlumatların Bərpası</title>
 </head>
 
 <body>
-
     <!-- Header Section Starts -->
-    <header class="custom-header hidden lg:flex items-center justify-between px-12 py-6 bg-blue-800">
-        <nav class="flex items-center gap-8">
-            <a href="#" class="text-white hover:text-blue-400 font-semibold">Ana Səhifə</a>
-            <a href="#" class="text-white hover:text-blue-400 font-semibold">Haqqımızda</a>
-            <a href="#" class="text-white hover:text-blue-400 font-semibold">Xidmətlər</a>
-        </nav>
 
-        <div class="flex gap-5">
-            <a href="#" class="text-white hover:text-blue-400 font-semibold">AZ</a>
-            <a href="#" class="text-white hover:text-blue-400 font-semibold">RU</a>
-            <a href="#" class="text-white hover:text-blue-400 font-semibold">EN</a>
+    <header class="hidden lg:flex flex-col items-center">
+        <div class="custom-header flex items-center justify-between px-12 py-6 ml-auto">
+            <nav class="flex items-center gap-8">
+                <a href="#" class="text-white hover:text-blue-400 font-semibold">Ana Səhifə</a>
+                <a href="#" class="text-white hover:text-blue-400 font-semibold">Haqqımızda</a>
+                <a href="#" class="text-white hover:text-blue-400 font-semibold">Xidmətlər</a>
+            </nav>
+
+            <div class="flex gap-5">
+                <a href="#" class="text-white hover:text-blue-400 font-semibold">AZ</a>
+                <a href="#" class="text-white hover:text-blue-400 font-semibold">RU</a>
+                <a href="#" class="text-white hover:text-blue-400 font-semibold">EN</a>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+
+        <div class="services-section bg-white w-full py-2 px-8 hidden lg:flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <h4 class="text-3xl font-semibold tracking-wide text-blue-600">Data <span class="text-blue-800">Recovery</span></h4>
+            </div>
+
+            <div class="grid lg:grid-cols-4 gap-12 text-center">
+                <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
+                    <i class='bx bx-mobile-alt text-5xl text-blue-600'></i>
+                    <p class="mt-4 font-semibold text-lg">iPhone məlumatların bərpası</p>
+                </div>
+                <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
+                    <i class='bx bx-chip text-5xl text-blue-600'></i>
+                    <p class="mt-4 font-semibold text-lg">SSD məlumatların bərpası</p>
+                </div>
+                <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
+                    <i class='bx bx-hdd text-5xl text-blue-600'></i>
+                    <p class="mt-4 font-semibold text-lg">HDD məlumatların bərpası</p>
+                </div>
+                <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
+                    <i class='bx bx-server text-5xl text-blue-600'></i>
+                    <p class="mt-4 font-semibold text-lg">RAID məlumatların bərpası</p>
+                </div>
+            </div>
         </div>
     </header>
+    
     <div class="left-side"></div>
 
     <!-- Header Section Ends -->
 
 
     <!-- Mobile Navbar -->
-    <div id="mobile-menu" class="mobile-navbar flex lg:hidden items-center justify-between px-6 py-4 bg-blue-800">
+
+    <div id="mobile-menu" class="mobile-navbar flex lg:hidden items-center justify-between px-6 py-4 ml-auto">
         <img id="close-icon" src="./assets/images/icons/close.svg" alt="close-icon" class="hidden cursor-pointer">
         <i id="menu-toggle" class="bx bx-menu text-white text-3xl cursor-pointer"></i>
         <div class="flex gap-4">
@@ -57,22 +79,23 @@
             <a href="#" class="text-white hover:text-blue-400 font-semibold">RU</a>
             <a href="#" class="text-white hover:text-blue-400 font-semibold">EN</a>
         </div>
+
+        <!-- Mobile Menu Content-->
+
+        <nav id="mobile-menu-content" class="hidden lg:hidden z-10 absolute right-10 top-11 border border-blue-700 w-[200px] bg-white rounded-xl shadow-md p-4 transition-all duration-300">
+            <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Ana Səhifə</a>
+            <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Haqqımızda</a>
+            <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Xidmətlər</a>
+        </nav>
     </div>
 
-    <!-- Mobile Menu Content-->
-    <nav id="mobile-menu-content"
-        class="hidden lg:hidden z-10 absolute right-10 top-11 border border-blue-700 w-[200px] bg-white rounded-xl shadow-md p-4 transition-all duration-300">
-        <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Ana Səhifə</a>
-        <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Haqqımızda</a>
-        <a href="#" class="block py-2 text-blue-800 font-semibold hover:text-blue-600">Xidmətlər</a>
-    </nav>
-
-    <!-- Mobile Header -->
-    <div class="bg-white py-5 px-6 mt-10 shadow-lg lg:hidden flex items-center justify-between">
+    <!-- Mobile Header Starts -->
+     
+    <div class="bg-white py-5 px-6 mt-1 shadow-lg lg:hidden flex items-center justify-between">
         <div class="flex items-center gap-6">
-            <h4 class="text-2xl font-semibold tracking-wide text-blue-600">Data <span
-                    class="text-blue-800">Recovery</span></h4>
+            <h4 class="text-2xl font-semibold tracking-wide text-blue-600">Data <span class="text-blue-800">Recovery</span></h4>
         </div>
+
         <div class="relative inline-block dropdown-menu mx-3">
             <button class="flex items-center gap-3 px-5 w-[220px] h-[50px] bg-blue-600 text-white rounded-lg">
                 <img src="./assets/images/icons/candy-box.svg" alt="candy-box-icon" class="w-[30px] h-[30px]">
@@ -99,60 +122,33 @@
             </div>
         </div>
     </div>
+    
+    <!-- Mobile Header Ends -->
 
-    <!-- Services Section -->
-    <section class="services-section bg-white mt-12 py-2 px-8 hidden lg:flex items-center justify-between">
-        <div class="flex items-center gap-4">
-            <h4 class="text-3xl font-semibold tracking-wide text-blue-600">Data <span
-                    class="text-blue-800">Recovery</span></h4>
-        </div>
-
-        <div class="grid lg:grid-cols-4 gap-12 text-center">
-            <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
-                <i class='bx bx-mobile-alt text-5xl text-blue-600'></i>
-                <p class="mt-4 font-semibold text-lg">iPhone məlumatların bərpası</p>
-            </div>
-            <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
-                <i class='bx bx-chip text-5xl text-blue-600'></i>
-                <p class="mt-4 font-semibold text-lg">SSD məlumatların bərpası</p>
-            </div>
-            <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
-                <i class='bx bx-hdd text-5xl text-blue-600'></i>
-                <p class="mt-4 font-semibold text-lg">HDD məlumatların bərpası</p>
-            </div>
-            <div class="p-6 rounded-lg hover:bg-blue-100 transition-all">
-                <i class='bx bx-server text-5xl text-blue-600'></i>
-                <p class="mt-4 font-semibold text-lg">RAID məlumatların bərpası</p>
-            </div>
-        </div>
-    </section>
+    <!-- Banner Section Starts -->
 
     <section class="banner-section relative overflow-hidden">
         <div class="slick-slider">
-            <div class="slick-slide h-screen bg-cover bg-center"
-                style="background-image: url('./assets/images/Asus-gaming-laptop-hard-drive-replacement-and-upgrade-to-solid-state-drive-IMG_20190922_151200.jpg');">
+            <div class="slick-slide h-screen bg-cover bg-center" style="background-image: url('./assets/images/Asus-gaming-laptop-hard-drive-replacement-and-upgrade-to-solid-state-drive-IMG_20190922_151200.jpg');">
                 <div class="flex items-center justify-center h-full">
                     <div class="text-center text-white px-4">
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">Məlumatlarınızı Etibarlı Əllərə Həvalə Edin</h1>
                         <p class="text-lg md:text-xl">Hər növ məlumat itkilərini peşəkar şəkildə bərpa edirik. Bizə
                             güvənin!</p>
-                        <button
-                            class="px-6 py-2 my-5 border border-blue-500 text-white hover:bg-blue-500 hover:text-white hover:border-blue-700 rounded-lg transition-all duration-300">
+                        <button class="px-6 py-2 my-5 border border-blue-500 text-white hover:bg-blue-500 hover:text-white hover:border-blue-700 rounded-lg transition-all duration-300">
                             Müraciət Et
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="slick-slide h-screen bg-cover bg-center"
-                style="background-image: url('./assets/images/img.png');">
+            <div class="slick-slide h-screen bg-cover bg-center" style="background-image: url('./assets/images/img.png');">
                 <div class="flex items-center justify-center h-full">
                     <div class="text-center text-white px-4">
                         <h1 class="text-4xl md:text-6xl font-bold mb-4">İtmiş Məlumatlarınızı Bərpa Edirik</h1>
                         <p class="text-lg md:text-xl">Fayllarınızın harada və necə silinməsindən asılı olmayaraq, onları
                             geri qaytarırıq.</p>
-                        <button
-                            class="px-6 py-2 my-4 border border-blue-500 text-white hover:bg-blue-500 hover:text-white hover:border-blue-700 rounded-lg transition-all duration-300">
+                        <button class="px-6 py-2 my-4 border border-blue-500 text-white hover:bg-blue-500 hover:text-white hover:border-blue-700 rounded-lg transition-all duration-300">
                             Müraciət Et
                         </button>
                     </div>
@@ -161,19 +157,25 @@
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about-section px-12 py-6 flex flex-col md:flex-row items-center gap-8">
+    <!-- Banner Section Ends-->
+
+    <section class="about-section px-[15px] md:px-[50px] lg:px-12 py-6 flex flex-col md:flex-row items-start gap-8">
         <!-- Left side (The texts of the part) -->
-        <div class="left-side md:w-1/2">
-            <h1 class="text-3xl font-bold text-blue-600">Məlumatların Bərpası Üzrə Servis Mərkəzi | Data Recovery</h1>
+        <div class="left-side lg:w-1/2">
+            <h1 class="text-3xl font-medium text-blue-600">Məlumatların Bərpası Üzrə Servis Mərkəzi | Data Recovery</h1>
             <span class="block w-full h-[1px] bg-gray-400 my-4"></span>
             <p class="text-lg text-gray-700">
-                Noutbukunuzda, kompüterinizdə və ya flaş kartınızda gözlənilmədən və ya səhv hərəkətlər nəticəsində hər hansı bir məlumat və ya fayl silinibsə, dərhal işinizi dayandırın və bizə müraciət edin. Çünki istifadəni davam etdirmək, silinmiş məlumatların daha dərinə getməsinə səbəb olur və bərpa prosesini çətinləşdirir. Əgər məlumat itkisi virus hücumu nəticəsində baş veribsə, bərpa mümkün ola bilər, lakin mütəxəssislərə müraciət etməyiniz vacibdir.
+                Noutbukunuzda, kompüterinizdə və ya flaş kartınızda gözlənilmədən və ya səhv hərəkətlər nəticəsində hər
+                hansı bir məlumat və ya fayl silinibsə, dərhal işinizi dayandırın və bizə müraciət edin. Çünki
+                istifadəni davam etdirmək, silinmiş məlumatların daha dərinə getməsinə səbəb olur və bərpa prosesini
+                çətinləşdirir. Əgər məlumat itkisi virus hücumu nəticəsində baş veribsə, bərpa mümkün ola bilər, lakin
+                mütəxəssislərə müraciət etməyiniz vacibdir.
             </p>
             <p class="mt-4 text-lg text-gray-700">
-                Bu cür problemlər proqram və ya aparat nasazlığı, virus hücumu, düzgün bağlanmama, vacib məlumatların təsadüfən silinməsi və ya disk formatlanması səbəbindən yarana bilər.
+                Bu cür problemlər proqram və ya aparat nasazlığı, virus hücumu, düzgün bağlanmama, vacib məlumatların
+                təsadüfən silinməsi və ya disk formatlanması səbəbindən yarana bilər.
             </p>
-            <h2 class="mt-6 text-2xl font-bold text-blue-600">Məlumatların Bərpası Nə Zaman Tələb Olunur?</h2>
+            <h2 class="mt-6 text-2xl font-medium text-blue-600">Məlumatların Bərpası Nə Zaman Tələb Olunur?</h2>
             <span class="block w-full h-[1px] bg-gray-400 my-4"></span>
 
             <ul class="list-disc list-inside mt-4 text-lg text-gray-700">
@@ -183,26 +185,169 @@
                 <li>Hard disk və ya yaddaş qurğusu zədələndikdə.</li>
             </ul>
             <p class="mt-4 text-lg text-gray-700">
-                Silinmə səbəbindən asılı olmayaraq istənilən formatda olan məlumatlar - musiqi, sənədlər, şəkillər, audio və video fayllar bərpa edilə bilər. Hətta flaş kart və ya sərt disk formatlaşdırıldıqdan sonra belə məlumatlar qaytarıla bilər. Lakin dəqiq diaqnoz qoymadan məlumatların tam bərpa olunub-olunmayacağını demək mümkün deyil.
+                Silinmə səbəbindən asılı olmayaraq istənilən formatda olan məlumatlar - musiqi, sənədlər, şəkillər,
+                audio və video fayllar bərpa edilə bilər. Hətta flaş kart və ya sərt disk formatlaşdırıldıqdan sonra
+                belə məlumatlar qaytarıla bilər. Lakin dəqiq diaqnoz qoymadan məlumatların tam bərpa
+                olunub-olunmayacağını demək mümkün deyil.
             </p>
-        
-            <h2 class="mt-6 text-2xl font-bold text-blue-600">Məlumat Bərpasını Özünüz Etməkdənsə, Niyə Bizə Müraciət Etməlisiniz?</h2>
+
+            <h2 class="mt-6 text-2xl font-medium text-blue-600">Məlumat Bərpasını Özünüz Etməkdənsə, Niyə Bizə Müraciət
+                Etməlisiniz?</h2>
             <span class="block w-full h-[1px] bg-gray-400 my-4"></span>
             <p class="mt-4 text-lg text-gray-700">
-                Peşəkar mütəxəssislər tərəfindən aparılan bərpa işləri 99% hallarda uğurla nəticələnir. Qalan 1% isə sərt diskin ağır zədələnməsi və fiziki deformasiyası ilə bağlı hallardır. Lakin hətta belə vəziyyətlərdə də məlumatları bərpa etməyə cəhd göstərmək mümkündür.  
+                Peşəkar mütəxəssislər tərəfindən aparılan bərpa işləri 99% hallarda uğurla nəticələnir. Qalan 1% isə
+                sərt diskin ağır zədələnməsi və fiziki deformasiyası ilə bağlı hallardır. Lakin hətta belə vəziyyətlərdə
+                də məlumatları bərpa etməyə cəhd göstərmək mümkündür.
             </p>
             <p class="mt-4 text-lg text-gray-700">
-                Üstəlik, müştərilərimiz yalnız uğurlu nəticə əldə etdikdə ödəniş edirlər. Siz risk etmədən, etibarlı və peşəkar xidmət ala bilərsiniz.
+                Üstəlik, müştərilərimiz yalnız uğurlu nəticə əldə etdikdə ödəniş edirlər. Siz risk etmədən, etibarlı və
+                peşəkar xidmət ala bilərsiniz.
             </p>
         </div>
-        
+
         <!-- Right side (the image of the part) -->
-        <div class="right-side md:w-1/2 md:flex hidden justify-center">
+        <div class="right-side lg:w-1/2 lg:flex hidden justify-start items-end">
             <img src="./assets/images/310069303_588239309756052_1513635842477209858_n.jpg" alt="Məlumatların Bərpası" class="w-full max-w-lg">
+        </div>
+    </section>
+
+    <!-- About Section Ends -->
+
+    <!-- Main Service Section Starts -->
+
+    <section class="main-services bg-[linear-gradient(to_bottom,#e3f2fd,#f5f5f5)] mt-[165px] px-[15px] md:px-[50px] lg:px-12 py-6">
+        <h1 class="text-3xl font-medium text-blue-600 flex items-center gap-2">
+            <img src="./assets/images/icons/error.svg" alt="">
+            Əsas Xidmətlərimiz:
+        </h1>
+        <div class="cards items-center grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6 md:gap-8 mt-8 text-center">
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/pngwing.com (1).png" alt="SSD" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">SSD Məlumatların Bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/f91eea35-e0ae-4190-8c03-8cd45bdd4651.e21db9e5da365af29c05163d8c591add.webp" alt="HDD" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">HDD Bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/blue-portfolio-folder-3d-icon_165488-4785-removebg-preview 1.png" alt="Yaddaş Kart" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">Zədələnmiş Faylların Bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/pngwing.com (3).png" alt="Flash Kart" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">Flash Kart Bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/pngwing.com (44).png" alt="Yaddaş Kart" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">Yaddaş Kartın Bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/pngwing.com.png" alt="CD/DVD" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">CD/DVD və Blu-ray Bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/pngwing.com (47).png" alt="Microsoft Office" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">Microsoft Office sənədlərin bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/Hp Laptop Png Free Download - 640x470.png" alt="Noutbuk" class="mx-auto w-[100px] md:w-[165px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">Noutbukdakı məlumatların bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/pngwing.com (4).png" alt="RAW" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">RAW-dan məlumatların bərpası</a>
+            </div>
+    
+            <div class="card-item group cursor-pointer transition-transform duration-300">
+                <img src="./assets/images/service-images/pngwing.com (4).png" alt="RAW" class="mx-auto w-[100px] md:w-[120px]">
+                <div class="h-1.5 w-12 bg-blue-500 mx-auto my-6 rounded-3xl"></div>
+                <a class="text-[18px] text-gray-700 group-hover:text-blue-500">RAW-dan məlumatların bərpası</a>
+            </div>
         </div>
     </section>
     
 
+    <!-- Main Service Section Ends -->
+
+    <!-- Failure Reasons Section Starts -->
+
+    <section class="failure-reasons mt-[88px] px-[15px] md:px-[50px] lg:px-12 py-6">
+        <h1 class="text-3xl text-blue-600 font-medium mb-8 flex items-center gap-2">
+            <img src="./assets/images/icons/broken-chain.svg" alt="broken-chain icon">
+            Uğursuzluğun səbəbləri:
+        </h1>        
+    
+        <div class="failure-reasons-cards grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div class="card-item1 relative p-6 flex flex-col items-center text-white rounded-lg overflow-hidden group">
+                <img src="./assets/images/failure-reasons/USB-Flash-Drive-Thumb-Drive-laptop-computer.webp" alt="" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gray-900 opacity-60 hover:opacity-75 transition duration-300"></div>
+                <i class='bx bx-memory-card text-blue-400 text-5xl relative'></i>
+                <p class="mt-4 text-center relative">Yaddaş kartı tanınır, amma daha az həcmi göstərir</p>
+            </div>
+    
+            <div class="card-item2 relative p-6 rounded-lg flex flex-col items-center text-white overflow-hidden group">
+                <img src="./assets/images/failure-reasons/5cf40752a49472a2f174bc01c85cbce1.jpeg" alt="" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gray-900 opacity-60 hover:opacity-75 transition duration-300"></div>
+                <i class='bx bx-desktop text-blue-400 text-5xl relative'></i>
+                <p class="mt-4 text-center relative">Cihaz PC-də aşkar edilmir</p>
+            </div>
+    
+            <div class="card-item3 relative p-6 rounded-lg flex flex-col items-center text-white overflow-hidden group">
+                <img src="./assets/images/failure-reasons/Full-Guide-to-Fix-Cant-Delete-Files-from5-SD-Card-Error.png" alt="" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gray-900 opacity-60 hover:opacity-75 transition duration-300"></div>
+                <i class='bx bx-chip text-blue-400 text-5xl relative'></i>
+                <p class="mt-4 text-center relative">Yaddaş mikrosxemlərinin zədələnməsi</p>
+            </div>
+    
+            <div class="card-item4 relative p-6 bg-gray-900 rounded-lg flex flex-col items-center text-white overflow-hidden group">
+                <img src="./assets/images/failure-reasons/cybersecurity-support-.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gray-900 opacity-60 hover:opacity-75 transition duration-300"></div>
+                <i class='bx bx-lock-open text-blue-400 text-5xl relative'></i>
+                <p class="mt-4 text-center relative">Bitlocker açarının bərpası barədə məlumat</p>
+            </div>
+    
+            <div class="card-item5 relative p-6 bg-gray-900 rounded-lg flex flex-col items-center text-white overflow-hidden group">
+                <img src="./assets/images/failure-reasons/e3ac-samsung-970-evo-plus-2.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gray-900 opacity-60 hover:opacity-75 transition duration-300"></div>
+                <i class='bx bx-hdd text-blue-400 text-5xl relative'></i>
+                <p class="mt-4 text-center relative">Formatlanmış SSD-dən məlumat bərpa edilə bilərmi?</p>
+            </div>
+    
+            <div class="card-item6 relative p-6 rounded-lg shadow-lg flex flex-col items-center text-white overflow-hidden group">
+                <img src="./assets/images/failure-reasons/1720769700994.png" alt="" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gray-900 opacity-60 hover:opacity-75 transition duration-300"></div>
+                <i class='bx bx-bug text-blue-400 text-5xl relative'></i>
+                <p class="mt-4 text-center relative">Kompüter viruslarının iş prinsipi</p>
+            </div>
+    
+            <div class="card-item7 relative p-6 bg-gray-900 rounded-lg flex flex-col items-center text-white overflow-hidden group">
+                <img src="./assets/images/failure-reasons/51InmLowFwL._AC_.jpg" alt="" class="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
+                <div class="absolute inset-0 bg-gray-900 opacity-60 hover:opacity-75 transition duration-300"></div>
+                <i class='bx bx-usb text-blue-400 text-5xl relative'></i>
+                <p class="mt-4 text-center relative">Fleş cihazı PC-də tanınmaya bilər</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Failure Reasons Section Ends -->
+    
     <script src="./assets/js/srcipt.js"></script>
 
 </body>
